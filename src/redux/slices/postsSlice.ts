@@ -1,4 +1,4 @@
-// redux/slices/postSlice.ts
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Post, PostsState } from "../../types/postTypes";
 

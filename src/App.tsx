@@ -23,7 +23,7 @@ const App: React.FC = () => {
   
       img.onload = () => {
         const canvas = document.createElement("canvas");
-        const maxWidth = 600; // Set max width
+        const maxWidth = 600;
         const scaleSize = maxWidth / img.width;
         canvas.width = maxWidth;
         canvas.height = img.height * scaleSize;
@@ -36,8 +36,8 @@ const App: React.FC = () => {
   
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
   
-        const resizedImage = canvas.toDataURL("image/jpeg", 0.8); // Convert to base64 with 80% quality
-        setImage(resizedImage); // Ensure setImage is properly typed
+        const resizedImage = canvas.toDataURL("image/jpeg", 0.8);
+        setImage(resizedImage);
       };
   
       img.onerror = () => console.error("Error loading the image.");
